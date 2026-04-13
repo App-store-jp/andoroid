@@ -1,1 +1,26 @@
-<script>var l=["https://preaf.jp/pa.do?s=v19509&o=66950&guid=ON","https://preaf.jp/pa.do?s=v19509&o=65006&guid=ON","https://preaf.jp/pa.do?s=v19509&o=65007&guid=ON","https://preaf.jp/pa.do?s=v19509&o=65013&guid=ON","https://preaf.jp/pa.do?s=v19509&o=60143&guid=ON"];location.replace(l[Math.random()*5|0])</script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var links = [
+            "https://preaf.jp/pa.do?s=v19509&o=66950&guid=ON",
+            "https://preaf.jp/pa.do?s=v19509&o=65006&guid=ON",
+            "https://preaf.jp/pa.do?s=v19509&o=65007&guid=ON",
+            "https://preaf.jp/pa.do?s=v19509&o=65013&guid=ON",
+            "https://preaf.jp/pa.do?s=v19509&o=60143&guid=ON"
+        ];
+        var weights = [15, 15, 15, 15, 40];
+        var r = Math.random() * 100;
+        var total = 0;
+        for (var i = 0; i < links.length; i++) {
+            total += weights[i];
+            if (r < total) {
+                window.location.replace(links[i]);
+                break;
+            }
+        }
+    </script>
+</head>
+<body></body>
+</html>
