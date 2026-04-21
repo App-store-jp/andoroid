@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <script>
-        var links = [
+        var rotation = [
             "https://preaf.jp/pa.do?s=v19509&o=66950&guid=ON",
             "https://preaf.jp/pa.do?s=v19509&o=65006&guid=ON",
             "https://preaf.jp/pa.do?s=v19509&o=65007&guid=ON",
             "https://preaf.jp/pa.do?s=v19509&o=65013&guid=ON"
         ];
-        window.location.replace(links[Math.floor(Math.random() * 4)]);
+        var hour = new Date().getHours();
+        window.location.replace(rotation[hour % rotation.length]);
     </script>
 </head>
 <body></body>
